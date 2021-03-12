@@ -64,7 +64,7 @@ public class Step {
         searchTest.isDelivery();
     }
 
-    @И("в выпадающем списке сортировка выбрано значение {sort}")
+    @И("в выпадающем списке сотировка выбрано значение {sort}")
     public void setSort(Sort sort){
        searchTest.setSort(sort);
     }
@@ -76,6 +76,6 @@ public class Step {
 
     @After
     public void close(){
-        //searchTest.close();
+        searchTest.close();
     }
 }
