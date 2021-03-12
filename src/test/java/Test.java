@@ -1,11 +1,13 @@
+import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(
-        features = "feature/feature",
+        features = "src/test/resources/feature",
         glue = "stepDef",
         tags = "@all"
 )
-public class Test {
+public class Test extends AbstractTestNGCucumberTests
+{
     public void run(){
     }
 }

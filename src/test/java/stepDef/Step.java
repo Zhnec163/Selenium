@@ -28,7 +28,6 @@ public class Step {
         searchTest.openSite();
     }
 
-
     @И("в выпадающем списке категорий выбрана {categories}")
     public void setCaregoryName(Categories category){
         searchTest.setCaregoryName(category.getId());
