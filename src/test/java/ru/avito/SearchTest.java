@@ -14,6 +14,8 @@ public class SearchTest {
     WebDriver driver;
     WebDriverWait wait;
 
+    public byte[] getScreenshot(){ return ((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES); }
+
     public void setUp(){
         System.setProperty("webdriver.chrome.driver", "src/test/resources/drivers/chromedriver.exe" );
         driver = new ChromeDriver();
@@ -21,13 +23,9 @@ public class SearchTest {
         wait = new WebDriverWait(driver, 5);
     }
 
-    public void openSite(){
-        driver.get("https://www.avito.ru/");
-    }
+    public void openSite(){ driver.get("https://www.avito.ru/"); }
 
-    public void setCaregoryName(int category){
-        driver.findElement(By.cssSelector("option[value='" + category + "']")).click();
-    }
+    public void setCaregoryName(int category){ driver.findElement(By.cssSelector("option[value='" + category + "']")).click(); }
 
     public void setItemName(String name){
         driver.findElement(By.id("search")).sendKeys(name);
@@ -74,7 +72,7 @@ public class SearchTest {
         }
     }
 
-    public void close(){
+    public void tearDown(){
         driver.quit();
     }
 }
