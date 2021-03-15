@@ -49,7 +49,7 @@ public class SearchTest {
 
     public void result(String name){
         Assert.assertTrue(driver.findElement(By.id("search")).getAttribute("value").equals(name));
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("[data-marker='search-filters/submit-button']")));
+        //wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("[data-marker='search-filters/submit-button']")));
     }
 
     public void isDelivery(){
