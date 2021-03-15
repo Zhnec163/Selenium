@@ -96,6 +96,7 @@ public class Step {
 
     @After
     public void tearDown(){
+        getScreenshot();
         searchTest.tearDown();
     }
 }
