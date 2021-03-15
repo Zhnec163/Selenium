@@ -23,7 +23,7 @@ public class SearchTest {
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         wait = new WebDriverWait(driver, 15);
     }
-
+    //dasdas
     public void openSite(){ driver.get("https://www.avito.ru/"); }
 
     public void setCaregoryName(int category){ driver.findElement(By.cssSelector("option[value='" + category + "']")).click(); }
