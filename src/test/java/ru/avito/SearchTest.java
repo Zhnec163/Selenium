@@ -20,7 +20,7 @@ public class SearchTest {
         System.setProperty("webdriver.chrome.driver", "src/test/resources/drivers/chromedriver.exe" );
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        wait = new WebDriverWait(driver, 5);
+        wait = new WebDriverWait(driver, 15);
     }
 
     public void openSite(){ driver.get("https://www.avito.ru/"); }
