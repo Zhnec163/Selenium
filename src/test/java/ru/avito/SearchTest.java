@@ -44,7 +44,7 @@ public class SearchTest {
     public void pressShowAdsButton() {
         driver.findElement(By.cssSelector("[data-marker='suggest(0)']")).click();
         driver.findElement(By.cssSelector("[data-marker='popup-location/save-button']")).click();
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("[data-marker='search-filters/submit-button']")));
+        //wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("[data-marker='search-filters/submit-button']")));
     }
 
     public void result(String name){
