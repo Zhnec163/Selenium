@@ -23,7 +23,6 @@ public class SearchTest {
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         wait = new WebDriverWait(driver, 15);
     }
-
     public void openSite(){ driver.get("https://www.avito.ru/"); }
 
     public void setCaregoryName(int category){ driver.findElement(By.cssSelector("option[value='" + category + "']")).click(); }
@@ -44,12 +43,10 @@ public class SearchTest {
     public void pressShowAdsButton() {
         driver.findElement(By.cssSelector("[data-marker='suggest(0)']")).click();
         driver.findElement(By.cssSelector("[data-marker='popup-location/save-button']")).click();
-        //wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("[data-marker='search-filters/submit-button']")));
     }
 
     public void result(String name){
         Assert.assertTrue(driver.findElement(By.id("search")).getAttribute("value").equals(name));
-        //wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("[data-marker='search-filters/submit-button']")));
     }
 
     public void isDelivery(){
